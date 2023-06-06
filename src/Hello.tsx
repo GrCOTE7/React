@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 
 const Hello: FunctionComponent = () => {
-  const name: String = 'React';
+  const name = ('React');
 
   return (
-    <h1>Hello , {name} !</h1>
+    <h1>Hello World !  ({name}) !</h1>
   )
 }
 
