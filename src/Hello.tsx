@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 
-const App: FunctionComponent = () => {
+const Hello: FunctionComponent = () => {
   const name: String = 'React';
 
   return (
-    <h1>Hello, {name} !</h1>
+    <h1>Hello , {name} !</h1>
   )
 }
 
-export default App;
+export default Hello;
