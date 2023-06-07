@@ -10,8 +10,8 @@ const PokemonsList: FunctionComponent = () => {
       <h1>Pokédex</h1>
       <p>Il y a {pokemons.length} pokemons dans le Pokédex</p><br/>
       <ul>
-        {pokemons.map((element, index) => (
-          <li key={index}>{index+1} - {element.name}</li>
+        {pokemons.map(({name}, index) => (
+          <li key={name}>{index+1} - {name}</li>
         ))}
       </ul>
     </div>
