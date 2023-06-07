@@ -8,7 +8,12 @@ const Hello: FunctionComponent = () => {
   return (
     <div>
       <h1>Pokédex</h1>
-      <p>Il y a {pokemons.length} pokemons dans le Pokedex</p>
+      <p>Il y a {pokemons.length} pokemons dans le Pokedex</p><br/>
+      <ul>
+        {pokemons.map((element, index) => (
+          <li key={index}>{index} - {element.name}</li>
+        ))}
+      </ul>
     </div>
   )
 }
