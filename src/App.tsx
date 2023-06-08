@@ -34,7 +34,7 @@ function App() {
         {fruits.map((fruit) => (
           <li key={fruit.id}>
             {fruit.id} - {fruit.nom}{" "}
-            <button onClick={() => handleDelete(fruit.id)}>X</button>
+            <button onClick={() => handleDelete(fruit.id)}  className="sp-button">&nbsp;X&nbsp;</button>
           </li>
         ))}
       </ul>
