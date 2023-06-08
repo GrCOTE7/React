@@ -1,9 +1,24 @@
-import React, { FunctionComponent } from 'react';
-import POKEMONSLIST from './components/pokemonsList';
+import React, { useState } from "react";
+import "./styles.css";
 
-const App: FunctionComponent = () => {
+function App() {
+  // State (État, données)
+  const [compteur, setCompteur] = useState(1);
+
+  // Comporments (Comportements, évènements)
+  const handleClick = () => {
+    // alert (compteur++);
+    setCompteur(compteur + 1);
+    console.log(compteur);
+  };
+
+  // Render (Affichage)
   return (
-    <POKEMONSLIST />
-  )
+    <div>
+      <h1>{compteur}</h1>
+      <button onClick={handleClick}>Incrémente</button>
+    </div>
+  );
 }
+
 export default App;
