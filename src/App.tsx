@@ -10,7 +10,7 @@ function App() {
   ]);
 
   // Comporments (Comportements, évènements)
-  const handleDelete = (id) => {
+  const handleDelete = (id: number) => {
     console.log("handleDelete", id);
 
     // 1. Copie du State
