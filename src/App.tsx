@@ -1,22 +1,31 @@
-import React, { useState } from "react";
-import "./styles.min.css";
+import { useState } from "react";
+import "./styles.css";
 
 function App() {
   // State (État, données)
-  const [compteur, setCompteur] = useState(1);
+  const [fruits, setFruits] = useState([
+    { id: 1, nom: "Abricot" },
+    { id: 2, nom: "Banane" },
+    { id: 3, nom: "Cerise" }
+  ]);
 
   // Comporments (Comportements, évènements)
-  const handleClick = () => {
-    // alert (compteur++);
-    setCompteur(compteur + 1);
-    console.log(compteur);
-  };
+
 
   // Render (Affichage)
   return (
-    <div>
-      <h1>{compteur}</h1>
-      <button onClick={handleClick}>Incrémente</button>
+    <div className="container">
+      
+      <h1>Liste de fruits</h1>
+
+      <ul>
+        {fruits.map((fruit) => (
+          <li>
+            {fruit.id} - {fruit.nom} <button>X</button>
+          </li>
+        ))}
+      </ul>
+
     </div>
   );
 }
