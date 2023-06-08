@@ -28,7 +28,7 @@ function App() {
 
   // Render (Affichage)
   return (
-    <div>
+    <div className="container">
       <h1>Liste de fruits</h1>
       <ul>
         {fruits.map((fruit) => (
