@@ -18,7 +18,7 @@ function App() {
     const fruitsCopy = [...fruits]; // 2nd way - More frequently seen
     console.log(fruitsCopy);
 
-    // 2. Manipuler la cpie du State
+    // 2. Manipuler la copie du State
     const fruitsCopyUpdated = fruitsCopy.filter((fruit) => fruit.id !== id);
     console.log("fruitsCopyUpdated", fruitsCopyUpdated);
 
