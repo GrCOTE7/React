@@ -25,15 +25,22 @@ function App() {
     e.preventDefault();
     console.log("newFruit = ", newFruit);
     // copy state
-    const fruitsCopy = [...fruits];
-    console.log("Au départ:", fruits);
-    // manip copy
-    const id = new Date().getTime();
-    fruitsCopy.push({ id, nom: newFruit });
-    console.log("Après ajout:", fruitsCopy);
-    // setter
-    setFruits(fruitsCopy);
-    setNewFruit("");
+    if (newFruit) {
+      const fruitsCopy = [...fruits];
+      console.log("Au départ:", fruits);
+      // manip copy
+      const id = new Date().getTime();
+      fruitsCopy.push({ id, nom: newFruit });
+      console.log("Après ajout:", fruitsCopy);
+      // setter
+      setFruits(fruitsCopy);
+      setNewFruit("");
+    } else {
+      setNewFruit("À préciser IMPERATIVEMENT !");
+      setTimeout(function () {
+        setNewFruit("");
+      }, 1000);
+    }
   };
 
   const handleDelete = (id) => {
