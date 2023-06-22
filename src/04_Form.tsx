@@ -58,7 +58,7 @@ function App() {
           onChange={handleChange}
           placeholder="Ajouter un fruit"
           value={newFruit}
-          // defaultValue="Banane"
+        // defaultValue="Banane"
         />
         &nbsp;
         <button>Ajouter +</button>
@@ -85,5 +85,4 @@ export default App;
  * 3. Collecte de ses données
  *  Methode 1: useRef ( Pas Re-Render :-( ) = documentGetElementById en "React"
  *  Methode 2: Synchronisation descendante / ascendante
- *
  */
