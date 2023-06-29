@@ -10,7 +10,7 @@ Video:
 00:58:29 05 Découper son composant
 01:16:34 06 (bonus) Réusabilité des composants
 01:26:13 Résumé et la suite
-
+...
 Version ralentie:
 
 01:40: Part 06.
