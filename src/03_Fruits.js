@@ -10,7 +10,7 @@ function App() {
   ]);
 
   // Comporments (Comportements, évènements)
-  const handleDelete = (id: number) => {
+  const handleDelete = (id) => {
     console.log("handleDelete", id);
 
     // 1. Copie du State
@@ -31,12 +31,12 @@ function App() {
     <div className="container">
       <h1>Liste de fruits</h1>
       <ul>
-        {fruits.map((fruit) => (
+        {fruits.map((fruit) =>
           <li key={fruit.id}>
             {fruit.id} - {fruit.nom}{" "}
-            <button onClick={() => handleDelete(fruit.id)}  className="sp-button">&nbsp;X&nbsp;</button>
+            <button onClick={() => handleDelete(fruit.id)} className="sp-button">&nbsp;X&nbsp;</button>
           </li>
-        ))}
+        )}
       </ul>
     </div>
   );

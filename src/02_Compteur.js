@@ -7,7 +7,7 @@ function App() {
 
   // Comporments (Comportements, évènements)
   const handleClick = () => {
-    console.log(compteur);
+    console.log('compteur', compteur);
     setCompteur(compteur + 1);
   };
 

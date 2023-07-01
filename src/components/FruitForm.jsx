@@ -7,7 +7,7 @@ export default function FruitForm({ handleAdd }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("newFruit = ", newFruit);
-    // copy state
+    
     if (newFruit) {
       // console.log("Au départ:", fruits);
       // manip copy
@@ -26,6 +26,7 @@ export default function FruitForm({ handleAdd }) {
   };
 
   const handleChange = (e) => {
+    // console.log(e)
     const valueAfterChange = e.target.value;
     console.log(valueAfterChange);
     setNewFruit(valueAfterChange);
