@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import Pokemon from '../models/pokemon';
-import POKEMONS from '../models/moke-pokemon';
+import POKEMONS from '../models/mock-pokemon';
 
 const PokemonsList: FunctionComponent = () => {
   const [pokemons] = useState<Pokemon[]>(POKEMONS);
