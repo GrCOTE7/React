@@ -35,6 +35,10 @@ function App() {
     setFruits(fruitsCopy);
   };
 
+  const preferedFruit = (fruitNom) => {
+    console.log(`Prefered Fruit : ${fruitNom}`);
+  };
+
   // Render (Affichage)
   return (
     <div className="container">
@@ -46,7 +50,7 @@ function App() {
         {fruits.map((fruit) => (
           <Fruit
             fruitInfo={fruit}
-            onFruitDelete={handleDelete}
+            onClick={() => [preferedFruit(fruit.nom), handleDelete(fruit.id)]}
             key={fruit.id}
           />
         ))}
