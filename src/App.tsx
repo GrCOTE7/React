@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
 import POKEMONSLIST from './components/pokemonsList';
-import Majority from './components/majority';
 
 const App: FunctionComponent = () => {
   //State
@@ -10,7 +9,6 @@ const App: FunctionComponent = () => {
   // Render
   return (
     <div>
-      <Majority />
       <POKEMONSLIST />
     </div>
   )

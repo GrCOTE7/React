@@ -9,7 +9,6 @@ const App: FunctionComponent = () => {
   // Event
   const handleClick = () => {
 
-    // age 15 1^1
     console.log('age = ', + age);
     setMajority(majority ^ 1)
     setAge((majority ^ 1) * 10 + 15);
