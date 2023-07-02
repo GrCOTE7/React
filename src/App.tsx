@@ -4,7 +4,7 @@ import React, { FunctionComponent, useState } from 'react';
 const App: FunctionComponent = () => {
   //State
   const [age, setAge] = useState(15)
-  const [majorite, setMajorite] = useState(0)
+  const [majority, setMajority] = useState(0)
   // console.log((majorite ^ 1) * 10 + 15)
 
   // Event
@@ -12,8 +12,8 @@ const App: FunctionComponent = () => {
 
     // age 15 1^1
     console.log('age = ', + age);
-    setMajorite(majorite ^ 1)
-    setAge((majorite ^ 1) * 10 + 15);
+    setMajority(majority ^ 1)
+    setAge((majority ^ 1) * 10 + 15);
   }
 
   // Render
