@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import Pokemon from '../models/pokemon';
 import POKEMONS from '../models/mock-pokemon';
-import PokemonCard from '../components/pokemonCard';
+import PokemonCard from '../components/pokemon-card';
 
 const PokemonsList: FunctionComponent = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -22,7 +22,7 @@ const PokemonsList: FunctionComponent = () => {
         <div className="row">
           {pokemons.map(pokemon => (
             <div className="col 
-            s6 m4"
+            m6 l4"
               key={pokemon.id}
               onClick={(e) => getPokemonName(pokemon.name, e)}
             >
