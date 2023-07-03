@@ -10,10 +10,6 @@ const PokemonsList: FunctionComponent = () => {
     setPokemons(POKEMONS)
   }, [])
 
-  const getPokemonName = (name: string, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.log(`${name}`)
-  }
-
   return (
     <div>
       <h1 className="center">Pokédex</h1>
@@ -21,15 +17,11 @@ const PokemonsList: FunctionComponent = () => {
         <h3>Il y a {pokemons.length} pokemons dans le Pokédex :</h3><br />
         <div className="row">
           {pokemons.map(pokemon => (
-            <div className="col 
-            m6 l4"
+
+            <PokemonCard
               key={pokemon.id}
-              onClick={(e) => getPokemonName(pokemon.name, e)}
-            >
-              <PokemonCard
-                key={pokemon.id}
-                pokemon={pokemon} />
-            </div>
+              pokemon={pokemon} />
+
           ))}
         </div>
       </div>
