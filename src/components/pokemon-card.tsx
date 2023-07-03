@@ -4,7 +4,7 @@ import './pokemon-card.css'
 
 type Props = {
   pokemon: Pokemon
-  borderColor?: string
+  borderColor?: string // This Props is optional
 }
 
 const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688' }) => {
