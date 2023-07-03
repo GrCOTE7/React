@@ -5,6 +5,10 @@ import POKEMONS from '../models/mock-pokemon';
 const PokemonsList: FunctionComponent = () => {
   const [pokemons] = useState<Pokemon[]>(POKEMONS);
 
+  const getPokemonName = (name: string, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    console.log(`${name}`)
+  }
+
   return (
     <div>
       <h1 className="center">Pokédex</h1>
@@ -12,7 +16,10 @@ const PokemonsList: FunctionComponent = () => {
         <h3>Il y a {pokemons.length} pokemons dans le Pokédex :</h3><br />
         <div className="row">
           {pokemons.map(({ id, name, picture, created }, index) => (
-            <div className="col s6 m4" key={id}>
+            <div className="col s6 m4"
+              key={id}
+              onClick={(e) => getPokemonName(name, e)}
+            >
               <div className="card horizontal">
                 <div className="card-image">
                   <img src={picture} alt={name} />
@@ -25,7 +32,6 @@ const PokemonsList: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-
           ))}
         </div>
       </div>
