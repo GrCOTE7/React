@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import POKEMONSLIST from './components/pokemonsList';
+import PokemonsList from './pages/pokemon-list';
 
 const App: FunctionComponent = () => {
   //State
@@ -8,9 +8,7 @@ const App: FunctionComponent = () => {
 
   // Render
   return (
-    <div>
-      <POKEMONSLIST />
-    </div>
+    <PokemonsList />
   )
 }
 export default App;
