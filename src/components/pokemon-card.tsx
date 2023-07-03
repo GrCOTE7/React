@@ -23,6 +23,10 @@ const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688
     console.log(`${name}`)
   }
 
+  const formatDate = (date: Date): string => {
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+  }
+
   return (
     <div className="col 
             m6 l4"
@@ -37,8 +41,16 @@ const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688
         </div>
         <div className="card-stacked">
           <div className="card-content">
-            <p>{pokemon.name}</p>
-            <p><small>{pokemon.created.toString()}</small></p>
+
+            <p><b>{pokemon.name}</b></p>
+            {/* <p><small>{pokemon.created.toString()}</small></p> */}
+
+            <p>{formatDate(pokemon.created)}</p>
+
+            <ul>
+              {pokemon.types.map(type => (<li key={type}>{type}</li>))}
+            </ul>
+
           </div>
         </div>
       </div>
