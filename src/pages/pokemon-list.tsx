@@ -20,7 +20,9 @@ const PokemonsList: FunctionComponent = () => {
 
             <PokemonCard
               key={pokemon.id}
-              pokemon={pokemon} />
+              pokemon={pokemon}
+              borderColor={"red"}
+            />
 
           ))}
         </div>
