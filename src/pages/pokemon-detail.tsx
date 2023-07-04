@@ -4,6 +4,7 @@ import Pokemon from '../models/pokemon';
 import POKEMONS from '../models/mock-pokemon';
 import formatDate from '../helpers/format-date';
 import formatType from '../helpers/format-type';
+import './pokemon-detail.css'
 
 type Params = { id: string };
 
@@ -26,6 +27,11 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
           <div className="col s12 m8 offset-m2">
             <h2 className="header center">{pokemon.name}</h2>
             <div className="card hoverable">
+
+              <div className="card-action">
+                <Link to="/">Retour</Link>
+              </div>
+
               <div className="card-image">
                 <img src={pokemon.picture} alt={pokemon.name} style={{ width: '250px', margin: '0 auto' }} />
               </div>
@@ -58,9 +64,6 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <div className="card-action">
-                  <Link to="/">Retour</Link>
                 </div>
               </div>
             </div>
