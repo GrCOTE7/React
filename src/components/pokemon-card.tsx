@@ -9,6 +9,8 @@ type Props = {
   borderColor?: string // This Props is optional
 }
 
+// Default value for optional broderColor
+// in case its not precised by parent component
 const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688' }) => {
 
   const [color, setColor] = useState<string>()
@@ -22,12 +24,11 @@ const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688
   }
 
   const getPokemonName = (name: string, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.log(`${name}`)
+    console.log(`${name}`, e)
   }
 
   return (
-    <div className="col 
-            m6 l4"
+    <div className="col m6 l4"
       key={pokemon.id}
       onClick={(e) => getPokemonName(pokemon.name, e)}
       onMouseEnter={showBorder}
