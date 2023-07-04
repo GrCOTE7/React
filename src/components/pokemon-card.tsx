@@ -22,14 +22,15 @@ const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688
   const goToPokemon = (id: number) => {
     history.push(`/pokemons/${id}`)
   }
+  const handleOnClick = () => {
+    getPokemonName(pokemon.name)
+    goToPokemon(pokemon.id)
+  }
 
   return (
     <div className="col m6 l4"
       key={pokemon.id}
-      onClick={() => [
-        getPokemonName(pokemon.name),
-        goToPokemon(pokemon.id)
-      ]}
+      onClick={handleOnClick}
       onMouseEnter={showBorder}
       onMouseLeave={hideBorder}
     >
