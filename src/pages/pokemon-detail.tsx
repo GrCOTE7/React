@@ -21,7 +21,7 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
   }, [match.params.id]);
 
   return (
-    <div>
+    <div> 
       {pokemon ? (
         <div className="row">
           <div className="col s12 m8 offset-m2">
