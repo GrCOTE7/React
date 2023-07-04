@@ -8,7 +8,10 @@ Video:
 
 7H: https://www.youtube.com/watch?v=oCINeytlyRA
 
-02:25 routes
+02:25 Routes
+
+03:25 Form submission
+
 
 Resources:
 https://www.alexandria-library.co/ressources-react/
