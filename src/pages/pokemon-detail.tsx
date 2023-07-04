@@ -21,7 +21,7 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
   }, [match.params.id]);
 
   return (
-    <div> 
+    <div>
       {pokemon ? (
         <div className="row">
           <div className="col s12 m8 offset-m2">
@@ -34,6 +34,8 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
 
               <div className="card-image">
                 <img src={pokemon.picture} alt={pokemon.name} style={{ width: '250px', margin: '0 auto' }} />
+                <Link to={`/pokemons/edit/${pokemon.id}`}
+                  className='btn btn-floating halfway-fab wave-effect wave-light'><i className="material-icons">edit</i></Link>
               </div>
               <div className="card-stacked">
                 <div className="card-content">
