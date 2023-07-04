@@ -3,6 +3,7 @@ import Pokemon from '../models/pokemon';
 import './pokemon-card.css'
 import formatDate from '../helpers/format-date'
 import formatType from '../helpers/format-type'
+import { useHistory } from 'react-router-dom';
 
 type Props = {
   pokemon: Pokemon
@@ -14,14 +15,21 @@ type Props = {
 const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688' }) => {
 
   const [color, setColor] = useState<string>()
+  const history = useHistory();
   const showBorder = () => { setColor(borderColor) }
   const hideBorder = () => { setColor('#f5f5f5') }
   const getPokemonName = (name: string) => { console.log(`${name}`) }
+  const goToPokemon = (id: number) => {
+    history.push(`/pokemons/${id}`)
+  }
 
   return (
     <div className="col m6 l4"
       key={pokemon.id}
-      onClick={() => getPokemonName(pokemon.name)}
+      onClick={() => [
+        getPokemonName(pokemon.name),
+        goToPokemon(pokemon.id)
+      ]}
       onMouseEnter={showBorder}
       onMouseLeave={hideBorder}
     >
