@@ -14,18 +14,9 @@ type Props = {
 const PokemonCard: FunctionComponent<Props> = ({ pokemon, borderColor = '#009688' }) => {
 
   const [color, setColor] = useState<string>()
-
-  const showBorder = () => {
-    setColor(borderColor)
-  }
-
-  const hideBorder = () => {
-    setColor('#f5f5f5')
-  }
-
-  const getPokemonName = (name: string, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.log(`${name}`, e)
-  }
+  const showBorder = () => { setColor(borderColor) }
+  const hideBorder = () => { setColor('#f5f5f5') }
+  const getPokemonName = (name: string) => { console.log(`${name}`) }
 
   return (
     <div className="col m6 l4"
