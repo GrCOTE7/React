@@ -3,7 +3,7 @@ import "./styles.css";
 
 function App() {
   // State (État, données)
-  const [fruits, setFruits] = useState([
+  const [fruits] = useState([
     { id: 1, nom: "Abricot" },
     { id: 2, nom: "Banane" },
     { id: 3, nom: "Cerise" }
@@ -19,7 +19,7 @@ function App() {
 
       <ul>
         {fruits.map((fruit) => (
-          <li>
+          <li key={fruit.id}>
             {fruit.id} - {fruit.nom}
           </li>
         ))}
