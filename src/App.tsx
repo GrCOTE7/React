@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.min.css";
+import "./styles.css";
 
 function App() {
   // State (État, données)
@@ -14,7 +14,7 @@ function App() {
 
   // Render (Affichage)
   return (
-    <div>
+    <div className ='counter'>
       <h1>{compteur}</h1>
       <button onClick={handleClick}>Incrémente</button>
     </div>

@@ -1,11 +1,1 @@
-#root {
-  font-family: Roboto, Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  margin: 0;
-  padding: 5px 10px;
-}
+#root{font-family:Roboto,Arial,sans-serif;color:#333;margin:0;padding:0}.counter{text-align:center;margin:0;padding:5px 10px}
