@@ -11,9 +11,18 @@ Video:
 
 7H: https://www.youtube.com/watch?v=oCINeytlyRA
 
-02:25 Routes
-03:28 Form submission
-04:23 Error managment
+02:25 01- Routes   
+02  
+02  
+02  
+03:04 05 - Form initialization  
+03:16 06 - Form changes  
+03:28 07 - Form submission  
+03:33 08 - Form validation
+03:45 09 - Form errors msg
+03:50 10 - Form conclusion
+
+04:23 5-Error managment
 
 
 npm i -g json-server

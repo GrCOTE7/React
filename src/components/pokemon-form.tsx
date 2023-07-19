@@ -64,18 +64,16 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
     }
     setForm({ ...form, ...{ types: newField } })
   }
+  
+  const isTypesValid = (type: string): boolean => {
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // console.log('clicked btn', form)
-    const isFormValid = validateForm();
+    if (form.types.value.length === 1 && hasType(type)) { return false }
+    if (form.types.value.length >= 3 && !hasType(type)) { return false }
 
-    if (isFormValid) {
-      history.push(`/pokemons/${pokemon.id}`)
-    }
+    return true
   }
 
-  const validateForm = (): boolean => {
+  const validateForm = () => {
     let newForm: Form = form
 
     // Validator name
@@ -109,19 +107,22 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
     }
 
     setForm(newForm)
-    return newForm.name.isValid && newForm.hp.isValid && newForm.cp.isValid
+    return (newForm.name.isValid && newForm.hp.isValid && newForm.cp.isValid)
   }
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // console.log('clicked btn', form)
+    const isFormValid = validateForm();
 
-  const isTypesValid = (type: string): boolean => {
-
-    if (form.types.value.length === 1 && hasType(type)) { return false }
-    if (form.types.value.length >= 3 && !hasType(type)) { return false }
-
-    return true
+    if (isFormValid) {
+      history.push(`/pokemons/${pokemon.id}`)
+    }
   }
 
 
   return (
+    // 2do Think & test onChange here
     <form onSubmit={e => handleSubmit(e)}>
       <div className="row">
         <div className="col s12 m8 offset-m2">
@@ -180,7 +181,7 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
                         <input id={type} name={type} type="checkbox" className="filled-in" value={type} checked={hasType(type)}
                           onChange={e => selectType(type, e)}
                           disabled={!isTypesValid(type)}
-                        ></input>
+                        ></input> 
                         <span>
                           <p className={formatType(type)}>{type}</p>
                         </span>
