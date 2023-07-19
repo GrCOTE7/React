@@ -9,8 +9,7 @@ function App() {
     { id: 3, nom: "Cerise" }
   ]);
 
-  // Comporments (Comportements, évènements)
-
+  // Events (Behaviors, events)
 
   // Render (Affichage)
   return (
@@ -21,7 +20,7 @@ function App() {
       <ul>
         {fruits.map((fruit) => (
           <li>
-            {fruit.id} - {fruit.nom} <button>X</button>
+            {fruit.id} - {fruit.nom}
           </li>
         ))}
       </ul>
