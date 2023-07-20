@@ -1,5 +1,5 @@
 export default class Pokemon {
-  // 1. Typage des propiétés d'un pokémon.
+  // 1. Typage des propriétés d'un pokémon.
   id: number;
   hp: number;
   cp: number;

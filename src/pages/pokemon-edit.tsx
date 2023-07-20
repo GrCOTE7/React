@@ -11,7 +11,8 @@ const PokemonEdit: FunctionComponent<RouteComponentProps<Params>> = ({ match }) 
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
   useEffect(() => {
-    PokemonService.getPokemon(+match.params.id).then(pokemon => setPokemon(pokemon))
+    PokemonService.getPokemon(+match.params.id)
+      .then(pokemon => setPokemon(pokemon))
   }, [match.params.id]);
 
   return (

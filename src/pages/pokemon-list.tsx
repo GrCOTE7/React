@@ -7,8 +7,7 @@ const PokemonsList: FunctionComponent = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
 
   useEffect(() => {
-    PokemonService
-      .getPokemons()
+    PokemonService.getPokemons()
       .then(pokemons => setPokemons(pokemons))
   }, [])
 

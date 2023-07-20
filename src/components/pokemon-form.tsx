@@ -64,7 +64,7 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
     }
     setForm({ ...form, ...{ types: newField } })
   }
-  
+
   const isTypesValid = (type: string): boolean => {
 
     if (form.types.value.length === 1 && hasType(type)) { return false }
@@ -78,7 +78,7 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
 
     // Validator name
     if (!/^[a-zA-Zàéè]{3,25}$/.test(form.name.value)) {
-      const errMsg: string = 'Le nom du pokemon est requis (1-25).'
+      const errMsg: string = 'Le nom du pokemon uniquement alphabétique, est requis (1-25).'
       const newField: Field = { value: form.name.value, error: errMsg, isValid: false }
       newForm = { ...newForm, ...{ name: newField } }
     } else {
@@ -109,13 +109,14 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
     setForm(newForm)
     return (newForm.name.isValid && newForm.hp.isValid && newForm.cp.isValid)
   }
-  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log('clicked btn', form)
+    console.log('clicked submit btn',form)
     const isFormValid = validateForm();
-
+    console.log('isFormValid', isFormValid)
     if (isFormValid) {
+      // 2do setForm({ ...form })
       history.push(`/pokemons/${pokemon.id}`)
     }
   }
@@ -181,7 +182,7 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
                         <input id={type} name={type} type="checkbox" className="filled-in" value={type} checked={hasType(type)}
                           onChange={e => selectType(type, e)}
                           disabled={!isTypesValid(type)}
-                        ></input> 
+                        ></input>
                         <span>
                           <p className={formatType(type)}>{type}</p>
                         </span>

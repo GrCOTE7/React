@@ -21,8 +21,8 @@ Video:
 03:33 08 - Form validation
 03:45 09 - Form errors msg
 03:50 10 - Form conclusion
+           (Simu API Rest)
 
-04:23 5-Error managment
 
 
 npm i -g json-server
