@@ -118,8 +118,8 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
     console.log('isFormValid', isFormValid)
     if (isFormValid) {
       pokemon.name = form.name.value
-      pokemon.hp = form.hp.value
-      pokemon.cp = form.cp.value
+      pokemon.hp = form.hp.value * 1
+      pokemon.cp = form.cp.value * 1
       pokemon.types = form.types.value
       console.log(pokemon)
       PokemonService.updatePokemon(pokemon)
