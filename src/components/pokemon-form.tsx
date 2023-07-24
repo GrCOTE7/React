@@ -122,9 +122,9 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon }) => {
       pokemon.cp = form.cp.value * 1
       pokemon.types = form.types.value
       console.log(pokemon)
+      
       PokemonService.updatePokemon(pokemon)
         .then(() => history.push(`/pokemons/${pokemon.id}`))
-      history.push(`/pokemons/${pokemon.id}`)
     }
   }
 
