@@ -11,6 +11,8 @@ Video:
 
 7H: https://www.youtube.com/watch?v=oCINeytlyRA
 
+0 - Basis
+
 02:25 01- Routes   
 02  
 02  
@@ -23,6 +25,12 @@ Video:
 03:50 10 - Form conclusion
            (Simu API Rest)
 
+1 - API 
+
+
+
+04:24 16 - Change Item (HTTP request)
+04:30 17 - Save user changes
 
 
 npm i -g json-server
