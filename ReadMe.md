@@ -31,6 +31,8 @@ Video:
 
 04:24 16 - Change Item (HTTP request)
 04:30 17 - Save user changes
+04:35 18 - Remove a pokemon
+04:44 19 - Add a pokemon
 
 
 npm i -g json-server
